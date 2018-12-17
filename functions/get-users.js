@@ -15,15 +15,18 @@
 import axios from 'axios';
 
 export const handler = (event, context, callback) => {
-  const API_URL = 'https://api.github.com/users';
-  const API_CLIENT_ID = '6e91ba0560e2f523d3d1';
-  const API_CLIENT_SECRET = '6ea1b0850d49e51412cd810f5a75a9000b534b7c';
+  const { API_URL, API_CLIENT_ID, API_CLIENT_SECRET } = process.env;
+
   const URL = `${API_URL}?client_id=${API_CLIENT_ID}&client_secret=${API_CLIENT_SECRET}`;
 
   // Send user response
   const send = (body) =>
     callback(null, {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+      },
       body: JSON.stringify(body),
     });
 
@@ -31,7 +34,7 @@ export const handler = (event, context, callback) => {
   const getUsers = () =>
     axios
       .get(URL)
-      .then((res) => send(res.data))
+      .then(({ data }) => send(data))
       .catch((err) => send(err));
 
   // Make sure method is GET
