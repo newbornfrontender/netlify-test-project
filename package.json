@@ -9,13 +9,15 @@
   "scripts": {
     "format": "prettier --write **/*.{html,js,md}",
     "lambda:serve": "netlify-lambda serve functions",
-    "lambda:build": "netlify-lambda build functions"
+    "lambda:build": "netlify-lambda build functions",
+    "serve": "serve"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "netlify-lambda": "^1.1.1"
   },
   "devDependencies": {
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "serve": "^10.1.1"
   }
 }
