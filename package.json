@@ -1,0 +1,9 @@
+{
+  "name": "netlify-test-project",
+  "version": "1.0.0",
+  "description": "Netlify test project",
+  "repository": "https://github.com/newbornfrontender/netlify-test-project.git",
+  "author": "Infant Frontender <newbornfrontender@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
