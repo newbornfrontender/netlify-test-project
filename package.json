@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "format": "prettier --write **/*.{js,md}",
+    "format": "prettier --write **/*.{html,js,md}",
     "lambda:serve": "netlify-lambda serve functions",
     "lambda:build": "netlify-lambda build functions"
   },
