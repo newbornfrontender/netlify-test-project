@@ -5,5 +5,8 @@
   "repository": "https://github.com/newbornfrontender/netlify-test-project.git",
   "author": "Infant Frontender <newbornfrontender@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "netlify-lambda": "^1.1.1"
+  }
 }
