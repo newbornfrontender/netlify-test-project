@@ -7,11 +7,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "format": "prettier --write **/*.js",
+    "format": "prettier --write **/*.{js,md}",
     "lambda:serve": "netlify-lambda serve functions",
     "lambda:build": "netlify-lambda build functions"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "netlify-lambda": "^1.1.1"
   },
   "devDependencies": {
